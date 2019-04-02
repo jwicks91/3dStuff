@@ -1,6 +1,8 @@
 let b1;let bar=[];let bar1=[];let b2;let lenChg;
+let length;
+
 function setup() {
-lenChg=10;length=20;
+lenChg=20;length=20;
 start1();
 can=createCanvas(800,600,WEBGL);
 can.position(25,25);
@@ -15,7 +17,7 @@ for(let j=0;j<10;j++){
 let ang=0;
 
 function draw() {
-background(0,0,120);
+background(0,0,250);
 //b1.rX(2);
 translate(50,50,50);
 //bar[3].rX(30);

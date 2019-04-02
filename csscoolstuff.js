@@ -1,7 +1,7 @@
 let rad;
 let c; 
-let length=20;
 let val;
+let sl,parSl;
 function start1(){
 	c=color(250,250,0);
 	
@@ -11,6 +11,14 @@ function start1(){
 	rad.option('restart',2);
 	rad.option('chgradius',3);
 	rad.changed(addColor);
+	
+	parSl=createP('change the size');parSl.id('cont');
+	parSl.class('parbdd');parSl.position(900,150);
+	sl=createSlider(5,50,25,1);
+	sl.parent('cont');
+	sl.changed(chglen);//sl.position(900,250);
+	
+	
 }
 function addColor(){
 	if(rad.value()){
@@ -20,3 +28,6 @@ function addColor(){
 	}
 }
 
+function chglen(){
+	length=sl.value();
+}
